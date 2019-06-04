@@ -41,9 +41,13 @@ namespace ThiTracNghiemOnline.Models
 
         public virtual LOAI_DE_THI LOAI_DE_THI { get; set; }
 
+        [JsonIgnore]
+        [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CAU_HOI> CAU_HOI { get; set; }
 
+        [JsonIgnore]
+        [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LOP_HOC> LOP_HOC { get; set; }
     }

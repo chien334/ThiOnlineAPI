@@ -38,6 +38,7 @@ namespace ThiTracNghiemOnline.Models
         public virtual DbSet<DSDeThi> DSDeThis { get; set; }
         public virtual DbSet<DSLuaChonCuaBaiThi> DSLuaChonCuaBaiThis { get; set; }
         public virtual DbSet<DSLuaChonCuaDeThi> DSLuaChonCuaDeThis { get; set; }
+        public virtual DbSet<ThongTinH> ThongTinHS { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
