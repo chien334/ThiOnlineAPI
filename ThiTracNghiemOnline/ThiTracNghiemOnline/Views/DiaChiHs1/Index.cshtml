@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ThiTracNghiemOnline.Models.DiaChiH>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.họ_và_tên)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.số_nhà)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.loại_địa_chỉ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phường_xã)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quận_huyện)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tỉnh_thành_phố)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.họ_và_tên)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.số_nhà)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.loại_địa_chỉ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phường_xã)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quận_huyện)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tỉnh_thành_phố)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.mã_học_sinh }) |
+            @Html.ActionLink("Details", "Details", new { id=item.mã_học_sinh }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.mã_học_sinh })
+        </td>
+    </tr>
+}
+
+</table>
