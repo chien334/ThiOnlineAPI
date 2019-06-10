@@ -1,29 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Description;
+using System.Web.Mvc;
+using ThiTracNghiemOnline.Models;
+
 
 namespace ThiTracNghiemOnline.Controllers
 {
     public class ClasstController : ApiController
     {
+        private Model1 db = new Model1();
         // GET: api/Classt
-        public IEnumerable<string> Get()
+        public IEnumerable<LOP> GetInfoST()
         {
-            return new string[] { "value1", "value2" };
+            return db.LOPs;
         }
 
         // GET: api/Classt/5
-        public string Get(int id)
+        public async Task <IHttpActionResult>  GetInfoST(int id)
         {
-            return "value";
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var infoST = await db.LOPs.FindAsync(id);
+
+            if (infoST == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(infoST.TEN_LOP);
         }
 
         // POST: api/Classt
-        public void Post([FromBody]string value)
+        [ResponseType(typeof(LOP))]
+        public async Task<IHttpActionResult> PostClass ([FromBody]LOP lop)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            db.LOPs.Add(lop);
+            await db.SaveChangesAsync();
+
+            return CreatedAtRoute("DefaultApi", new { id = lop.MA_LOP }, lop);
         }
 
         // PUT: api/Classt/5

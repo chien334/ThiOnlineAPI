@@ -28,6 +28,7 @@ namespace ThiTracNghiemOnline.Models
 
         [StringLength(3)]
         public string MA_QUAN_HUYEN { get; set; }
+
         [JsonIgnore]
         [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

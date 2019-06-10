@@ -31,6 +31,7 @@ namespace ThiTracNghiemOnline.Models
         public virtual DE_THI DE_THI { get; set; }
 
         public virtual HOC_SINH HOC_SINH { get; set; }
+
         [JsonIgnore]
         [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

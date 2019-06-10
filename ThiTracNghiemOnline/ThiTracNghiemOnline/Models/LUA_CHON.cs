@@ -27,6 +27,7 @@ namespace ThiTracNghiemOnline.Models
         public bool? LA_DAP_AN { get; set; }
 
         public virtual CAU_HOI CAU_HOI { get; set; }
+
         [JsonIgnore]
         [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

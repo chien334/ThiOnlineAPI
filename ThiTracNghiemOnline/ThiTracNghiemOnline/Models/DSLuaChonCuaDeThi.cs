@@ -19,6 +19,11 @@ namespace ThiTracNghiemOnline.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long mã_câu_hỏi { get; set; }
 
+        [Key]
+        [Column(Order = 2)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public long Ma_LC { get; set; }
+
         [Column("nội dung lựa chọn")]
         [StringLength(100)]
         public string nội_dung_lựa_chọn { get; set; }

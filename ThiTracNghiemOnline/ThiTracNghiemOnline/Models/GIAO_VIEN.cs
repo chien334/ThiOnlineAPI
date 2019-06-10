@@ -32,6 +32,7 @@ namespace ThiTracNghiemOnline.Models
         public string GIOI_TINH_GV { get; set; }
 
         public bool? TRANG_THAI_GV { get; set; }
+
         [JsonIgnore]
         [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

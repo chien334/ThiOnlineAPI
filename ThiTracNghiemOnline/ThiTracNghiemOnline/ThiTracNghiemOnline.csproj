@@ -162,13 +162,16 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\CAU_HOIController.cs" />
     <Compile Include="Controllers\ClasstController.cs" />
     <Compile Include="Controllers\ExamTestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LOPsController.cs" />
     <Compile Include="Controllers\PointController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
+    <Compile Include="Controllers\ThongTinHsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -193,6 +196,8 @@
     <Compile Include="Models\LOP_HOC.cs" />
     <Compile Include="Models\LUA_CHON.cs" />
     <Compile Include="Models\Model1.cs" />
+    <Compile Include="Models\Model_mod\Dethi.cs" />
+    <Compile Include="Models\Model_mod\DeThiAo.cs" />
     <Compile Include="Models\MON_HOC.cs" />
     <Compile Include="Models\PHAN_CONG_DAY.cs" />
     <Compile Include="Models\PHUONG_XA.cs" />
@@ -259,6 +264,11 @@
     <Content Include="Views\DiaChiHs1\Details.cshtml" />
     <Content Include="Views\DiaChiHs1\Edit.cshtml" />
     <Content Include="Views\DiaChiHs1\Index.cshtml" />
+    <Content Include="Views\ThongTinHs\Create.cshtml" />
+    <Content Include="Views\ThongTinHs\Delete.cshtml" />
+    <Content Include="Views\ThongTinHs\Details.cshtml" />
+    <Content Include="Views\ThongTinHs\Edit.cshtml" />
+    <Content Include="Views\ThongTinHs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -22,6 +22,7 @@ namespace ThiTracNghiemOnline.Models
 
         [StringLength(50)]
         public string TEN_LOAI_DT { get; set; }
+
         [JsonIgnore]
         [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
