@@ -37,11 +37,7 @@ namespace ThiTracNghiemOnline.Controllers
         [ResponseType(typeof(CAU_HOI))]
         public async Task<IHttpActionResult> GetCAU_HOI(long id)
         {
-            //CAU_HOI cAU_HOI = await db.CAU_HOI.FindAsync(id);
-            //if (cAU_HOI == null)
-            //{
-            //    return NotFound();
-            //}
+
             var cAU_HOI = from ch in db.CAU_HOI
                           join dt in db.DE_THI on ch.MA_MH equals dt.MA_MH
                           join da in db.LUA_CHON on ch.MA_CH equals da.MA_CH
