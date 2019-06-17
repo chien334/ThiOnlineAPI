@@ -7,6 +7,6 @@ namespace ThiTracNghiemOnline.Models.Model_mod
 {
     public class ID
     {
-        public long id { get; set; }
+        public long Ma_lc { get; set; }
     }
 }

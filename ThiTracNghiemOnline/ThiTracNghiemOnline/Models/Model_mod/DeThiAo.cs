@@ -7,8 +7,7 @@ namespace ThiTracNghiemOnline.Models.Model_mod
 {
     public class DeThiAo
     { 
-        public long Ma_dt { get; set; }
-        public long Ma_cauhoi { get; set; }
-        public long Ma_lc { get; set; }
+        public long id { get; set; }
+        public int [] lc { get; set; }
     }
 }
