@@ -26,7 +26,6 @@ namespace ThiTracNghiemOnline.Models
 
         [StringLength(100)]
         public string TEN_MH { get; set; }
-
         [JsonIgnore]
         [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

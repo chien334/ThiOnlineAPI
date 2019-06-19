@@ -15,7 +15,6 @@ namespace ThiTracNghiemOnline.Models
         {
             CHI_TIET_BT = new HashSet<CHI_TIET_BT>();
             LUA_CHON = new HashSet<LUA_CHON>();
-            DE_THI = new HashSet<DE_THI>();
         }
 
         [Key]
@@ -32,15 +31,9 @@ namespace ThiTracNghiemOnline.Models
         [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHI_TIET_BT> CHI_TIET_BT { get; set; }
-
         [JsonIgnore]
         [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LUA_CHON> LUA_CHON { get; set; }
-
-        [JsonIgnore]
-        [IgnoreDataMember]
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DE_THI> DE_THI { get; set; }
     }
 }

@@ -25,14 +25,12 @@ namespace ThiTracNghiemOnline.Models
 
         [StringLength(10)]
         public string NIEN_KHOA { get; set; }
-
         [JsonIgnore]
         [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOC_SINH> HOC_SINH { get; set; }
 
         public virtual LOP LOP { get; set; }
-
         [JsonIgnore]
         [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -31,12 +31,10 @@ namespace ThiTracNghiemOnline.Models
         public string USER_PASSWORD { get; set; }
 
         public bool? STATUS { get; set; }
-
         [JsonIgnore]
         [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GIAO_VIEN> GIAO_VIEN { get; set; }
-
         [JsonIgnore]
         [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

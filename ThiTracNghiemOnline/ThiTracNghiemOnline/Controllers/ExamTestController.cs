@@ -99,8 +99,8 @@ namespace ThiTracNghiemOnline.Controllers
 
 
         // POST: api/ExamTest
-        [ResponseType(typeof(CAU_HOI))]
-        public async Task<IHttpActionResult> PostCAU_HOI(DeThiAo dad)
+        [HttpPost]
+        public IHttpActionResult PostCAU_HOI([FromBody] DeThiAo dad)
         {
             if (!ModelState.IsValid)
             {
@@ -111,14 +111,15 @@ namespace ThiTracNghiemOnline.Controllers
                         join dt in db.DE_THI on mh.MA_MH equals dt.MA_MH
                         join ch in db.CAU_HOI on mh.MA_MH equals ch.MA_MH
                         join lc in db.LUA_CHON on ch.MA_CH equals lc.MA_CH
-                        where lc.LA_DAP_AN == true && dt.MA_DT == dad.id
+                        from ct in db.CT_DETHI 
+                        where lc.LA_DAP_AN == true && dt.MA_DT == dad.made && ch.MA_CH == ct.MA_CH && ct.MA_DT==dad.made
                         select new
                         {
                             lc.MA_LC
                         };
             var arr = dapan.ToList();
-            int[] vs = new int[dad.lc.Count()];
-            var ar = dad.lc.ToList();
+            int[] vs = new int[dad.dapan.Count()];
+            var ar = dad.dapan.ToList();
 
 
             for (int i = 0; i < ar.Count(); i++)
@@ -132,8 +133,8 @@ namespace ThiTracNghiemOnline.Controllers
                     dapandung++;
                 }
             }
-
-            return Ok(dapandung);
+            //return Ok(dapan);
+            return Ok(new { resu = dapandung });
         }
 
         protected override void Dispose(bool disposing)

@@ -27,7 +27,6 @@ namespace ThiTracNghiemOnline.Models
         public string TEN_LOP { get; set; }
 
         public virtual KHOI KHOI { get; set; }
-
         [JsonIgnore]
         [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

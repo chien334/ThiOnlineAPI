@@ -16,6 +16,7 @@ namespace ThiTracNghiemOnline.Models
         public virtual DbSet<BAI_THI> BAI_THI { get; set; }
         public virtual DbSet<CAU_HOI> CAU_HOI { get; set; }
         public virtual DbSet<CHI_TIET_BT> CHI_TIET_BT { get; set; }
+        public virtual DbSet<CT_DETHI> CT_DETHI { get; set; }
         public virtual DbSet<DE_THI> DE_THI { get; set; }
         public virtual DbSet<DIA_CHI> DIA_CHI { get; set; }
         public virtual DbSet<GIAO_VIEN> GIAO_VIEN { get; set; }
@@ -34,11 +35,6 @@ namespace ThiTracNghiemOnline.Models
         public virtual DbSet<TINH_TP> TINH_TP { get; set; }
         public virtual DbSet<USER> USERs { get; set; }
         public virtual DbSet<USER_GROUP> USER_GROUP { get; set; }
-        public virtual DbSet<DiaChiH> DiaChiHS { get; set; }
-        public virtual DbSet<DSDeThi> DSDeThis { get; set; }
-        public virtual DbSet<DSLuaChonCuaBaiThi> DSLuaChonCuaBaiThis { get; set; }
-        public virtual DbSet<DSLuaChonCuaDeThi> DSLuaChonCuaDeThis { get; set; }
-        public virtual DbSet<ThongTinH> ThongTinHS { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -51,11 +47,6 @@ namespace ThiTracNghiemOnline.Models
                 .HasMany(e => e.CHI_TIET_BT)
                 .WithRequired(e => e.CAU_HOI)
                 .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<CAU_HOI>()
-                .HasMany(e => e.DE_THI)
-                .WithMany(e => e.CAU_HOI)
-                .Map(m => m.ToTable("CHI_TIET_DE_THI").MapLeftKey("MA_CH").MapRightKey("MA_DT"));
 
             modelBuilder.Entity<DE_THI>()
                 .HasMany(e => e.LOP_HOC)

@@ -28,6 +28,8 @@ namespace ThiTracNghiemOnline.Models
 
         public TimeSpan? THOI_GIAN_LAM { get; set; }
 
+        public long? DIEM { get; set; }
+
         public virtual DE_THI DE_THI { get; set; }
 
         public virtual HOC_SINH HOC_SINH { get; set; }

@@ -169,4 +169,3 @@ D:\ThiOnlineAPI\ThiOnlineAPI\ThiTracNghiemOnline\ThiTracNghiemOnline\obj\Debug\T
 D:\ThiOnlineAPI\ThiOnlineAPI\ThiTracNghiemOnline\ThiTracNghiemOnline\obj\Debug\ThiTracNghiemOnline.csproj.CopyComplete
 D:\ThiOnlineAPI\ThiOnlineAPI\ThiTracNghiemOnline\ThiTracNghiemOnline\obj\Debug\ThiTracNghiemOnline.dll
 D:\ThiOnlineAPI\ThiOnlineAPI\ThiTracNghiemOnline\ThiTracNghiemOnline\obj\Debug\ThiTracNghiemOnline.pdb
-D:\ThiOnlineAPI\ThiOnlineAPI\ThiTracNghiemOnline\ThiTracNghiemOnline\obj\Debug\ThiTracNghiemOnline.csprojAssemblyReference.cache

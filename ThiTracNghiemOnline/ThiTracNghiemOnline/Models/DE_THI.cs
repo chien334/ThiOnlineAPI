@@ -14,7 +14,6 @@ namespace ThiTracNghiemOnline.Models
         public DE_THI()
         {
             BAI_THI = new HashSet<BAI_THI>();
-            CAU_HOI = new HashSet<CAU_HOI>();
             LOP_HOC = new HashSet<LOP_HOC>();
         }
 
@@ -30,7 +29,6 @@ namespace ThiTracNghiemOnline.Models
 
         [StringLength(100)]
         public string TIEU_DE_DT { get; set; }
-
         [JsonIgnore]
         [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -41,11 +39,6 @@ namespace ThiTracNghiemOnline.Models
         public virtual MON_HOC MON_HOC { get; set; }
 
         public virtual LOAI_DE_THI LOAI_DE_THI { get; set; }
-
-        [JsonIgnore]
-        [IgnoreDataMember]
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CAU_HOI> CAU_HOI { get; set; }
         [JsonIgnore]
         [IgnoreDataMember]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
