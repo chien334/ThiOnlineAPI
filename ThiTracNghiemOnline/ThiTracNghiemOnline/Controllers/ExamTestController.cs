@@ -133,7 +133,7 @@ namespace ThiTracNghiemOnline.Controllers
                     dapandung++;
                 }
             }
-            //return Ok(dapan);
+           // return Ok(dapan);
             return Ok(new { resu = dapandung });
         }
 
