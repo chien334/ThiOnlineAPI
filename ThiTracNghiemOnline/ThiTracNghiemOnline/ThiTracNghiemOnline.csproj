@@ -165,6 +165,7 @@
     <Compile Include="Controllers\ClasstController.cs" />
     <Compile Include="Controllers\DeThiController.cs" />
     <Compile Include="Controllers\ExamTestController.cs" />
+    <Compile Include="Controllers\HOC_SINHController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PointController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
@@ -193,6 +194,7 @@
     <Compile Include="Models\Model_mod\CT_BAITHI.cs" />
     <Compile Include="Models\Model_mod\Dethi.cs" />
     <Compile Include="Models\Model_mod\DeThiAo.cs" />
+    <Compile Include="Models\Model_mod\DoiMatKhau.cs" />
     <Compile Include="Models\Model_mod\SAVE_BAI_THI.cs" />
     <Compile Include="Models\MON_HOC.cs" />
     <Compile Include="Models\PHAN_CONG_DAY.cs" />
@@ -202,6 +204,7 @@
     <Compile Include="Models\TINH_TP.cs" />
     <Compile Include="Models\USER.cs" />
     <Compile Include="Models\USER_GROUP.cs" />
+    <Compile Include="model\nhaphocsinh.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -256,6 +259,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\HOC_SINH\Create.cshtml" />
+    <Content Include="Views\HOC_SINH\Delete.cshtml" />
+    <Content Include="Views\HOC_SINH\Details.cshtml" />
+    <Content Include="Views\HOC_SINH\Edit.cshtml" />
+    <Content Include="Views\HOC_SINH\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

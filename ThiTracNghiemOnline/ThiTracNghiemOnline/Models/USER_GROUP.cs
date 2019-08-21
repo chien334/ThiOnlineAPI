@@ -10,6 +10,7 @@ namespace ThiTracNghiemOnline.Models
 
     public partial class USER_GROUP
     {
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public USER_GROUP()
         {

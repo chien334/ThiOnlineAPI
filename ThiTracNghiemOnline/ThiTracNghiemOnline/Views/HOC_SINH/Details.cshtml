@@ -1,0 +1,66 @@
+﻿@model ThiTracNghiemOnline.Models.HOC_SINH
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HOC_SINH</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LOP_HOC.NIEN_KHOA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOP_HOC.NIEN_KHOA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER.GROUP_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER.GROUP_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HO_TEN_HS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HO_TEN_HS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGAY_SINH_HS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAY_SINH_HS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GIOI_TINH_HS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIOI_TINH_HS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TRANG_THAI_HS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TRANG_THAI_HS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MA_HS }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

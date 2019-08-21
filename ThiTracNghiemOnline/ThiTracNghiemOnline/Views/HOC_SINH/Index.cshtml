@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ThiTracNghiemOnline.Models.HOC_SINH>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LOP_HOC.NIEN_KHOA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USER.GROUP_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HO_TEN_HS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAY_SINH_HS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GIOI_TINH_HS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRANG_THAI_HS)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOP_HOC.NIEN_KHOA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USER.GROUP_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HO_TEN_HS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAY_SINH_HS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIOI_TINH_HS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRANG_THAI_HS)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MA_HS }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MA_HS }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MA_HS })
+        </td>
+    </tr>
+}
+
+</table>
